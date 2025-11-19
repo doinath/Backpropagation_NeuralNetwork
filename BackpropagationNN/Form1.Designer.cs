@@ -36,6 +36,12 @@
             this.test = new System.Windows.Forms.Button();
             this.third_input = new System.Windows.Forms.TextBox();
             this.fourth_input = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.training_count_text = new System.Windows.Forms.Label();
+            this.epoch_numeric = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.epoch_numeric)).BeginInit();
             this.SuspendLayout();
             // 
             // first_input
@@ -54,14 +60,16 @@
             // 
             // output_box
             // 
-            this.output_box.Location = new System.Drawing.Point(377, 129);
+            this.output_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.output_box.Location = new System.Drawing.Point(441, 109);
+            this.output_box.Multiline = true;
             this.output_box.Name = "output_box";
-            this.output_box.Size = new System.Drawing.Size(300, 20);
+            this.output_box.Size = new System.Drawing.Size(163, 40);
             this.output_box.TabIndex = 2;
             // 
             // create_bpnn
             // 
-            this.create_bpnn.Location = new System.Drawing.Point(48, 222);
+            this.create_bpnn.Location = new System.Drawing.Point(38, 248);
             this.create_bpnn.Name = "create_bpnn";
             this.create_bpnn.Size = new System.Drawing.Size(89, 23);
             this.create_bpnn.TabIndex = 3;
@@ -71,7 +79,7 @@
             // 
             // train_nn
             // 
-            this.train_nn.Location = new System.Drawing.Point(177, 222);
+            this.train_nn.Location = new System.Drawing.Point(167, 248);
             this.train_nn.Name = "train_nn";
             this.train_nn.Size = new System.Drawing.Size(144, 23);
             this.train_nn.TabIndex = 4;
@@ -103,11 +111,68 @@
             this.fourth_input.Size = new System.Drawing.Size(138, 20);
             this.fourth_input.TabIndex = 7;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(141, 282);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(174, 25);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Training Count:";
+            // 
+            // training_count_text
+            // 
+            this.training_count_text.AutoSize = true;
+            this.training_count_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.training_count_text.Location = new System.Drawing.Point(317, 283);
+            this.training_count_text.Name = "training_count_text";
+            this.training_count_text.Size = new System.Drawing.Size(25, 25);
+            this.training_count_text.TabIndex = 9;
+            this.training_count_text.Text = "0";
+            // 
+            // epoch_numeric
+            // 
+            this.epoch_numeric.Location = new System.Drawing.Point(238, 332);
+            this.epoch_numeric.Name = "epoch_numeric";
+            this.epoch_numeric.Size = new System.Drawing.Size(104, 20);
+            this.epoch_numeric.TabIndex = 10;
+            this.epoch_numeric.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(141, 327);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 25);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Epoch";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(245, 355);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 20);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Limit: 1000";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.epoch_numeric);
+            this.Controls.Add(this.training_count_text);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.fourth_input);
             this.Controls.Add(this.third_input);
             this.Controls.Add(this.test);
@@ -119,6 +184,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.epoch_numeric)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,6 +200,11 @@
         private System.Windows.Forms.Button test;
         private System.Windows.Forms.TextBox third_input;
         private System.Windows.Forms.TextBox fourth_input;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label training_count_text;
+        private System.Windows.Forms.NumericUpDown epoch_numeric;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
